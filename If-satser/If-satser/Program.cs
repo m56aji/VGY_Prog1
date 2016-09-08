@@ -10,7 +10,7 @@ namespace If_satser
     {
         static void Main(string[] args)
         {
-            /*
+
             // Exempel_1 från C#skolan
             Console.WriteLine("Mata in ett heltal");
             string inmatat = Console.ReadLine();
@@ -80,7 +80,7 @@ namespace If_satser
             decimal tal2 = (decimal)(double.Parse(Console.ReadLine()));
 
             if (tal1 < tal2)
-                Console.WriteLine("Tal 2 var störst");
+                Console.WriteLine("Tal 2 var störst"); 
             else if (tal1 > tal2)
                 Console.WriteLine("Tal 1 var störst");
             else
@@ -95,7 +95,7 @@ namespace If_satser
                 Console.WriteLine("7 är inte en delare till: " + heltal);
             else
                 Console.WriteLine("7 är en delare till " + heltal);
-            */
+
 
         }
     }

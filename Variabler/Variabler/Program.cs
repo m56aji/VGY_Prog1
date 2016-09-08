@@ -1,5 +1,6 @@
 ﻿/* Skapad av André den 29 aug 2016
- * Koden är ett lösningsförslag på uppgifterna 1-5 i CSharpskolans Variabler-övningar
+ * Koden är ett lösningsförslag på uppgifterna 1-5 (+ en extra övning) i 
+ * CSharpskolans Variabler-övningar
  */
 
 using System;
