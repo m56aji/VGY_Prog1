@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*SwitchSatser är övningar från Csharpskolan
+ * André Jaoui den 9 sept 2014
+ */
+
+using System;
 
 namespace SwitchSatser
 {
