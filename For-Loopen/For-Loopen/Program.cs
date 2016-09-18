@@ -71,10 +71,7 @@ namespace For_Loopen
 
             Console.ReadKey();
             
-             */
-
-
-            //Övning7
+            //Övning7 beräknar finonaccital
             Console.WriteLine("Ange ett heltal så skrivs fibonacci-serien ut t.o.m ditt angivna tal");
             int fib = int.Parse(Console.ReadLine());
             int fib_0 = 0;
@@ -96,8 +93,61 @@ namespace For_Loopen
             Console.WriteLine();
             Console.ReadKey();
 
+            //Övning8 Beräknar kubikroten genom mha en for-loop
+            Console.WriteLine("Ange ett heltal så beräknar datorn kubikroten ur talet");
+            int kub = int.Parse(Console.ReadLine());
 
+            for (double i = 0; i < kub; i += 0.1) {
+                if ((kub - i * i * i) < 0.1) {
+                    Console.WriteLine("kubikroten är: " + i );
+                    break;
+                }
+            }
 
+            Console.ReadKey();
+            
+            //Övning9 Kontrollerar om ett givet tal är ett primtal
+            Console.WriteLine("Ange ett heltal så avgör programmet om det är ett primtal");
+            int prim = int.Parse(Console.ReadLine());
+            bool flag = false;
+
+            for (int i = 3; i < prim; i++)
+            {
+                if(prim%i == 0)     //Om resten vid heltalsdivison blir noll är det inte ett primtal
+                {
+                    Console.WriteLine(prim + " är INTE ett primtal");
+                    flag = true;
+                    break;
+                }
+            }
+
+            if(!flag)
+                Console.WriteLine(prim + " är ett primtal");
+
+            Console.ReadKey();
+            */
+
+            //Övning9 Kontrollerar om ett givet tal är ett primtal och primtalsfaktoriserar det i så fall
+            //Buggar!!!!
+            Console.WriteLine("Ange ett heltal så avgör programmet om det är ett primtal och i så fall primtalsfaktoriserar det");
+            int prim = int.Parse(Console.ReadLine());
+            bool flag = false;
+
+            for (int i = 2; i <= prim; i++)
+            {
+                if (prim % i == 0)     //Om resten vid heltalsdivison blir noll är det inte ett primtal
+                {
+                    Console.WriteLine(i + " är en primtalsfaktor");
+                    flag = true;
+                    prim = prim/i;
+                    i = 2;
+                }
+            }
+
+            if (!flag)
+                Console.WriteLine(prim + " är ett primtal");
+
+            Console.ReadKey();
 
             /*
             //Forms fråga 1
