@@ -128,7 +128,7 @@ namespace For_Loopen
             */
 
             //Övning9 Kontrollerar om ett givet tal är ett primtal och primtalsfaktoriserar det i så fall
-            //Buggar!!!!
+            //Buggar == Inte klart == !Klart
             Console.WriteLine("Ange ett heltal så avgör programmet om det är ett primtal och i så fall primtalsfaktoriserar det");
             int prim = int.Parse(Console.ReadLine());
             bool flag = false;
@@ -148,48 +148,7 @@ namespace For_Loopen
                 Console.WriteLine(prim + " är ett primtal");
 
             Console.ReadKey();
-
-            /*
-            //Forms fråga 1
-            for (int i = 0; i < 20; i++)
-            {
-                if (i == 10)
-                    break;
-
-                if (i % 2 == 0)
-                    continue;
-
-                Console.Write(i);
-            }
-            Console.WriteLine();
-
-            //Forms fråga 2
-            for (int i = 1; i <= 5; i++)
-            {
-                for (int j = 1; j <= i; j++) //Nested for loop
-                {
-                    Console.Write(j);
-                }
-                Console.Write("\n");
-            }
-            Console.ReadLine();
-
-            //En elefant balanserade
-            Console.WriteLine("En elefant balanserade");
-            Console.WriteLine("på en liten liten spindeltråååd");
-            Console.WriteLine("det tyckte han var så intressant");
-            Console.WriteLine("Så han gick och hämtade en annan elefant");
-
-            Console.WriteLine("2 elefanter balanserade");
-            Console.WriteLine("på en liten liten spindeltråååd");
-            Console.WriteLine("det tyckte de var så intressant");
-            Console.WriteLine("Så de gick och hämtade en annan elefant");
-
-            Console.WriteLine("3 elefanter balanserade");
-            Console.WriteLine("på en liten liten spindeltråååd");
-            Console.WriteLine("det tyckte de var så intressant");
-            Console.WriteLine("Så de gick och hämtade en annan elefant");
-            */
+            
         }
     }
 }
