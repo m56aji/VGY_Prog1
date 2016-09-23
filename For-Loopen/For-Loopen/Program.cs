@@ -10,7 +10,7 @@ namespace For_Loopen
     {
         static void Main(string[] args)
         {
-            /*
+            
             //Övning 1, skriver ut talen 0 - 99
             for (int counter = 0; counter < 100; counter++)
                 Console.WriteLine(counter);
@@ -125,7 +125,7 @@ namespace For_Loopen
                 Console.WriteLine(prim + " är ett primtal");
 
             Console.ReadKey();
-            */
+            
 
             //Övning9 Kontrollerar om ett givet tal är ett primtal och primtalsfaktoriserar det i så fall
             //Buggar == Inte klart == !Klart
