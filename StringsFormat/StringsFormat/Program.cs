@@ -29,8 +29,7 @@ namespace StringsFormat
             
             //Övning4 Skriver ut 123 kr med formatering
             double value = 123.00;
-            //Console.WriteLine(value.ToString("\\#\\#\\# ##0 kronor och \\0\\0 öre \\#\\#\\#"));
-            Console.WriteLine(value.ToString("\\#\\#\\# ##0 kronor och 00 öre \\#\\#\\#"));
+            Console.WriteLine(value.ToString("\\#\\#\\# ##0 kronor och \\0\\0 öre \\#\\#\\#"));
             Console.WriteLine();
             
             //Övning5 Skriver ut personnumret formaterad
