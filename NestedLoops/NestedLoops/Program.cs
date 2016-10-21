@@ -129,6 +129,8 @@ namespace NestedLoops
                         Console.Write(".");
                 }
                 Console.WriteLine();
+
+                
             }
         }
     }

@@ -12,7 +12,7 @@ namespace StringsFormat
         static void Main(string[] args)
         {
             //Övning1 Skriver ut dagens datum
-            DateTime dt = DateTime.Today;
+            DateTime dt = DateTime.Today;       //Today variabel inte metod i klassen DateTime
             Console.WriteLine(dt.ToString("d"));
             Console.WriteLine();
 
@@ -29,7 +29,7 @@ namespace StringsFormat
             
             //Övning4 Skriver ut 123 kr med formatering
             double value = 123.00;
-            Console.WriteLine(value.ToString("\\#\\#\\# ##0 kronor och \\0\\0 öre \\#\\#\\#"));
+            Console.WriteLine(value.ToString("\\#\\#\\# ##0 kronor och \\0\\0 öre \\#\\#\\#"));     // Styrtecken "\" behövs för utskrift av formattecken
             Console.WriteLine();
             
             //Övning5 Skriver ut personnumret formaterad
