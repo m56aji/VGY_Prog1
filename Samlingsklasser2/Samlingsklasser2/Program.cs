@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Samlingsklasser
+namespace Samlingsklasser2
 {
     class Program
     {
@@ -17,7 +17,7 @@ namespace Samlingsklasser
 
             Stopwatch stopwatch = new Stopwatch();            // Skapar ett tidtagarur(?)
             stopwatch.Start();
-            
+
             //Skapa en dictionary med int som nyckel och int som värde
             Dictionary<int, int> dict = new Dictionary<int, int>();
 
@@ -92,7 +92,7 @@ namespace Samlingsklasser
 
             Console.WriteLine("\n\nProgrammet läser in ett valfritt antal decimal/heltal följt av Enter. Medelvärdet skrivs ut löpande. Avsluta med 0");
             do
-            {               
+            {
                 Console.WriteLine("Mata in ett nytt värde");
                 dTal = double.Parse(Console.ReadLine());
                 talList.Add(dTal);
@@ -142,7 +142,7 @@ namespace Samlingsklasser
 
             do
             {
-                kortNr = rnd.Next(0, kortNamnList.Count-1);
+                kortNr = rnd.Next(0, kortNamnList.Count - 1);
                 Console.WriteLine(drag++ + " Draget kort: " + kortNamnList[kortNr]);
                 kortNamnList.RemoveAt(kortNr);
             } while (kortNamnList.Count > 0);
