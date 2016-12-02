@@ -88,6 +88,18 @@ namespace NestedLoops
             }
             Console.WriteLine();
 
+            //Övning4b, Triangel
+            for (int i = 0; i < 7; i++)
+            {
+                for (int k = 0; k < 7; k++)
+                {
+                    if (k - i > 0)
+                        Console.Write("*");
+                 }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+
             //Övning5, Kryss
             for (int i = 0; i < 7; i++)
             {
