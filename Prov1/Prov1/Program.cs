@@ -53,66 +53,61 @@ namespace Prov1
              * Tilldelning är att ge en variabel ett värde ovasett om det är initieraat eller ej. Tex i = 25;
              */
 
-            //Uppgift 4 ger utskriften "false"
-            int vikt = 0;
-            int length = 0;
-            int viktsum = 0;
-            int lengthsum = 0;
-            int[] viktLengthArray = new int[10];
+            //Uppgift 4
+            //int[] viktLengthArray = new int[10];
+            //int viktSum = 0, lengthSum = 0;
+            //int vikt, length;
 
-            for (int i = 0; i < 10; i += 2)
-            {
-                Console.WriteLine("Ange din vikt i kg");
-                vikt = int.Parse(Console.ReadLine());
-                viktLengthArray[i] = vikt;
-                viktsum += vikt;
-                            
-                Console.WriteLine("Ange din längd i cm");
-                length = int.Parse(Console.ReadLine());
-                viktLengthArray[i + 1] = length;
-                lengthsum += length;
-            }
+            //for (int index = 0; index < 10; index++)
+            //{
+            //    Console.WriteLine("Ange din vikt i kg");
+            //    vikt = int.Parse(Console.ReadLine());
+            //    viktLengthArray[index] = vikt;
+            //    viktSum += vikt;
 
-            Console.WriteLine("Viktsum: {0}, Längd: {1}", viktsum, lengthsum);
-            Console.WriteLine("Medellvikt: {0}, medellängd: {1}", viktsum/5, lengthsum/5);
+            //    Console.WriteLine("Ange din längd i cm");
+            //    length = int.Parse(Console.ReadLine());
+            //    viktLengthArray[++index] = length;
+            //    lengthSum += length;
+            //}
 
-            
-            //Uppgift 5 inhämtar information för att beräkna en persons BMI
-            double lengthD = viktLengthArray[1]/100.0;
+            //Console.WriteLine("Medellvikt: {0}, medellängd: {1}", viktSum / 5, lengthSum / 5);
 
-            double bmi = viktLengthArray[0] / lengthD / lengthD;
-            bmi = Math.Round(bmi, 1);
-            Console.WriteLine("Ditt BMI är {0} och klassas som {1}\n\n", bmi, BmiKlass(bmi));
+
+            ////Uppgift 5 inhämtar information för att beräkna en persons BMI
+            //double lengthD = viktLengthArray[1] / 100.0;
+
+            //double bmi = viktLengthArray[0] / lengthD / lengthD;
+            //bmi = Math.Round(bmi, 1);
+            //Console.WriteLine("Ditt BMI är {0} och klassas som {1}\n\n", bmi, BmiKlass(bmi));
 
             //Uppgift 6. Ger dubbla utskrifter för vissa summor
             int[] intArray = { 3, -6, 1, -2, -1, -3, 2, 5 };
             Array.Sort(intArray);
 
             for (int i = 0; i < intArray.Length; i++)
-            {
                 for (int j = 0; j < intArray.Length; j++)
-                {
                     for (int k = 0; k < intArray.Length; k++)
-                    {
                         if ((intArray[i] == intArray[j] + intArray[k]) && (j != k))
                             Console.WriteLine(intArray[i] + " = " + intArray[j] + " + " + intArray[k] + "\tijk: " + i + "  " + j + " " + k);
-                    }
-                }
-            }
+
+
+
+
         }
 
-        //Returnerar viktklass utifrån mottaget BMI-värde
+        //Returnerar viktklass utifrån anropets BMI-värde
         static string BmiKlass(double bmi)
         {
             if (bmi < 18.5)
                 return "Undervikt";
-            else if (bmi >= 18.5 && bmi < 25)
+            else if (bmi < 25)
                 return "Normalvikt";
-            else if (bmi >= 25 && bmi < 30)
+            else if (bmi < 30)
                 return "Övervikt";
-            else if (bmi >= 30 && bmi < 35)
+            else if (bmi < 35)
                 return "Fetma grad 1";
-            else if (bmi >= 35 && bmi < 40)
+            else if (bmi < 40)
                 return "Fetma grad 2";
             else return "Fetma grad 1";
         }
