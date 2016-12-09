@@ -14,10 +14,9 @@ namespace Samlingsklasser
     {
         static void Main(string[] args)
         {
-
             Stopwatch stopwatch = new Stopwatch();            // Skapar ett tidtagarur(?)
             stopwatch.Start();
-            
+
             //Skapa en dictionary med int som nyckel och int som värde
             Dictionary<int, int> dict = new Dictionary<int, int>();
 
@@ -92,7 +91,7 @@ namespace Samlingsklasser
 
             Console.WriteLine("\n\nProgrammet läser in ett valfritt antal decimal/heltal följt av Enter. Medelvärdet skrivs ut löpande. Avsluta med 0");
             do
-            {               
+            {
                 Console.WriteLine("Mata in ett nytt värde");
                 dTal = double.Parse(Console.ReadLine());
                 talList.Add(dTal);
@@ -102,7 +101,6 @@ namespace Samlingsklasser
             Console.WriteLine();
 
             //Övning3
-            //Skriv sedan ett program som slumpvis drar kort från korleken tills dess att alla 52 kort är dragna. Skriv ut varje kort du "drar".
             List<string> kortNamnList = new List<string>();
 
             kortNamnList.Add("kE");
@@ -142,7 +140,7 @@ namespace Samlingsklasser
 
             do
             {
-                kortNr = rnd.Next(0, kortNamnList.Count-1);
+                kortNr = rnd.Next(0, kortNamnList.Count - 1);
                 Console.WriteLine(drag++ + " Draget kort: " + kortNamnList[kortNr]);
                 kortNamnList.RemoveAt(kortNr);
             } while (kortNamnList.Count > 0);
@@ -177,7 +175,37 @@ namespace Samlingsklasser
                 }
             }
 
-            Console.WriteLine("Det blev " + parNbr / 10 + "% av dragen som gav par. Teoretiskt ska det bli 5,9%");
+            Console.WriteLine("Det blev " + parNbr / 10 + "% av dragen som gav par. Teoretiskt ska det bli 5,9%\n\n");
+
+            /*----------------------------------------------------------------------------------------*/
+            
+            //Övning 5. Sorterar en inmatad text efter ordfrekvensen i fallande ordning. En svår uppgift. A++!
+            Console.WriteLine("Skriv en text så kommer programmet att visa frekvensen av orden");
+            string str = Console.ReadLine();
+
+            //Skapar ett List-obejekt där oönskade strängtecken tas bort. Sträng används för att Replace(' ', '') inte fungerar
+            List<string> words = str.Replace(",", "").Replace("!", "").Replace("?", "").Replace(":", "").Replace(".", "").Split().ToList();
+
+            Dictionary<string, int> textDic = new Dictionary<string, int>();        //SortedList sorterar på Key, inte Value
+
+            for (int i = 0; i < words.Count; i++)
+            {
+                //Lägg till nyckel om denna inte redan finns
+                if (!textDic.ContainsKey(words[i]))
+                    textDic.Add(words[i], 0);
+
+                //Öka frekvensen av de enskilda orden
+                textDic[words[i]]++;
+            }
+
+            //Konverterar Dic till en sorterad Lista. 
+            List<KeyValuePair<string, int>> sorted = (from kv in textDic orderby kv.Value descending select kv).ToList();
+
+            //Skriver ut listan sorterad efte frekvenser
+            foreach (KeyValuePair<string, int> kvp in sorted)
+            {
+                Console.WriteLine("Nyckel: {0} \t\tFrekvens: {1}", kvp.Key, kvp.Value);
+            }
         }
     }
 }
