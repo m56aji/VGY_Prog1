@@ -153,6 +153,7 @@ namespace Felhantering
             }
             while (!oneMoreTime);
 
+            Object o = tal.
             return tal;
         }//slut på metoden heltalInmatning
 
