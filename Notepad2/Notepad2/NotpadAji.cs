@@ -21,6 +21,7 @@ namespace Notepad1
 
         private void stängToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Application.Exit();
         }
 
         private void öppnaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,11 +39,6 @@ namespace Notepad1
                 return;
 
             File.WriteAllText(filename, textBox1.Text);
-        }
-
-        private void avslutaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
