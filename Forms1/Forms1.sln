@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tidtagarur", "Tidtagarur\Tidtagarur.csproj", "{4BF82C74-BBCA-4905-A695-54E30CA4CB65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms1", "Forms1\Forms1.csproj", "{507E531E-6C29-4A27-A9DE-B0946E2FB02D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4BF82C74-BBCA-4905-A695-54E30CA4CB65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BF82C74-BBCA-4905-A695-54E30CA4CB65}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BF82C74-BBCA-4905-A695-54E30CA4CB65}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BF82C74-BBCA-4905-A695-54E30CA4CB65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{507E531E-6C29-4A27-A9DE-B0946E2FB02D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507E531E-6C29-4A27-A9DE-B0946E2FB02D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507E531E-6C29-4A27-A9DE-B0946E2FB02D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507E531E-6C29-4A27-A9DE-B0946E2FB02D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace Forms1
 {
     public partial class Form1 : Form
     {
@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Knapp_Click(object sender, EventArgs e)
         {
             Close();
         }

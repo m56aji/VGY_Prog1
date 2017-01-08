@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4BF82C74-BBCA-4905-A695-54E30CA4CB65}</ProjectGuid>
+    <ProjectGuid>{507E531E-6C29-4A27-A9DE-B0946E2FB02D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tidtagarur</RootNamespace>
-    <AssemblyName>Tidtagarur</AssemblyName>
+    <RootNamespace>Forms1</RootNamespace>
+    <AssemblyName>Forms1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

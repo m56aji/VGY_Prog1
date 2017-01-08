@@ -4,6 +4,7 @@ namespace Metoder
 {
     class Program
     {
+        #region Metoder
         static double CelsiusTillFarenheit(double celsius)
         {
             return (celsius / 5.0) * 9 + 32;
@@ -56,6 +57,7 @@ namespace Metoder
             }
             return sum;
         }
+        #endregion
 
         static void Main(string[] args)
         {
