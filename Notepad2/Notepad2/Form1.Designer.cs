@@ -1,4 +1,4 @@
-﻿namespace Notepad1
+﻿namespace Notepad2
 {
     partial class Notepad
     {
@@ -45,17 +45,20 @@
             this.visaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hjälpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Courier New", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(0, 24);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(280, 237);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // menuStrip1
             // 
@@ -141,6 +144,7 @@
             this.avslutaToolStripMenuItem.Name = "avslutaToolStripMenuItem";
             this.avslutaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.avslutaToolStripMenuItem.Text = "Avsluta";
+            this.avslutaToolStripMenuItem.Click += new System.EventHandler(this.avslutaToolStripMenuItem_Click);
             // 
             // redigeraToolStripMenuItem
             // 
@@ -171,6 +175,10 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "Text filer|*.txt";
             // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "Text filer|*.txt";
+            // 
             // Notepad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +189,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Notepad";
             this.Text = "Notepad";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Notepad_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -207,6 +216,7 @@
         private System.Windows.Forms.ToolStripMenuItem visaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hjälpToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
 
