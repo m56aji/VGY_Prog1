@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Tre i rad modifierad så att vinstberäkningen sker i metoder
+//Jag har valt att göra dem parameterlösa för att förenkla förståelsen
+using System;
 using System.Windows.Forms;
 
 namespace TickTackToe
@@ -6,9 +8,9 @@ namespace TickTackToe
     public partial class Form1 : Form       //Klassen subklassen Form1 ärver ":" egenskaper från föräldrarklassen Form
     {
         bool XTurn = false;
-        Button[,] buttonArray;                //Deklarera en 2:dimensionell array som fält/klassvariabel
-        int arrSize;                    //Gör arrSize till en klassvariabel
-        string playerXO;                  //Är det spelare X eller spelare O som gjort sista draget
+        Button[,] buttonArray;              //Deklarera en 2:dimensionell array som fält/klassvariabel
+        int arrSize;                        //Gör arrSize till en klassvariabel
+        string playerXO;                    //Är det spelare X eller spelare O som gjort sista draget
 
         public Form1()
         {
@@ -17,7 +19,7 @@ namespace TickTackToe
             buttonArray = new Button[,]  {  { button1, button2, button3},           //Element i rad 0
                                             { button4, button5, button6},           //Element i rad 1
                                             { button7, button8, button9} };         //Element i rad 2
-            arrSize = buttonArray.GetLength(0);                                           //Returnerar antal element på rad 0
+            arrSize = buttonArray.GetLength(0);                                     //Returnerar antal element på rad 0
         }
 
         //Raderar texten på knapparna efter en vinstomgång
