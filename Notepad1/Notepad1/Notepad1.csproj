@@ -57,6 +57,9 @@
     <EmbeddedResource Include="NotpadAji.resx">
       <DependentUpon>NotpadAji.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NotpadAji.sv.resx">
+      <DependentUpon>NotpadAji.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

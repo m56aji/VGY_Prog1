@@ -54,7 +54,7 @@ namespace Slump
             int guess = -1;
             int slumptal = randomerare.Next(101);
 
-            while (guess != slumptal)
+            while (guess != slumptal)                       //do-while hade passat bättre här
             {
                 Console.WriteLine("Vilket är ditt tal?");
                 guess = int.Parse(Console.ReadLine());

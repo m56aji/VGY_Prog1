@@ -2,23 +2,19 @@
 using System.IO;
 using System.Windows.Forms;
 
-namespace Notepad2
-{
-    public partial class Notepad : Form
-    {
+namespace Notepad2 {
+    public partial class Notepad : Form {
         OpenFileDialog openFileDialog = new OpenFileDialog();
         string filename = null;
         bool isUnsaved = false;
         bool ignoreTextChangedEvent = false;
 
-        public Notepad()
-        {
+        public Notepad(){
             InitializeComponent();
             UppdateTitle();
         }
 
-        private void UppdateTitle()
-        {
+        private void UppdateTitle() {
             string file;
             if (string.IsNullOrEmpty(filename))
                 file = "Unnamed";
@@ -31,10 +27,8 @@ namespace Notepad2
                 Text = file + " -Notepad";
         }
 
-        private void saveFile()
-        {
-            if (string.IsNullOrEmpty(filename))
-            {
+        private void saveFile() {
+            if (string.IsNullOrEmpty(filename)) {
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     filename = saveFileDialog.FileName;
                 else
@@ -46,8 +40,7 @@ namespace Notepad2
             UppdateTitle();
         }
 
-        private void nyToolStripMenuItem_Click(object sender, EventArgs e)  //Arkiv-Ny rullgardinsmeny
-        {
+        private void nyToolStripMenuItem_Click(object sender, EventArgs e) {
             var eventArgs = new FormClosingEventArgs(CloseReason.None, false);
             Notepad_FormClosing(null, eventArgs);
 
@@ -59,21 +52,15 @@ namespace Notepad2
             isUnsaved = false;
             UppdateTitle();
         }
-
-        private void stängToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void öppnaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        
+        private void öppnaToolStripMenuItem_Click(object sender, EventArgs e) {
             var eventArgs = new FormClosingEventArgs(CloseReason.None, false);
             Notepad_FormClosing(null, eventArgs);
 
             if (eventArgs.Cancel)
                 return;
 
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
+            if (openFileDialog.ShowDialog() == DialogResult.OK) {
                 ignoreTextChangedEvent = true;
                 textBox1.Text = File.ReadAllText(openFileDialog.FileName);
                 filename = openFileDialog.FileName;
@@ -82,20 +69,16 @@ namespace Notepad2
             }
         }
 
-        private void sparaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void sparaToolStripMenuItem_Click(object sender, EventArgs e) {
             saveFile();
         }
 
-        private void avslutaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void avslutaToolStripMenuItem_Click(object sender, EventArgs e) {
             Application.Exit();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            if (ignoreTextChangedEvent)
-            {
+        private void textBox1_TextChanged(object sender, EventArgs e) {
+            if (ignoreTextChangedEvent) {
                 ignoreTextChangedEvent = false;
                 return;
             }
@@ -103,18 +86,14 @@ namespace Notepad2
             UppdateTitle();
         }
 
-        private void Notepad_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (isUnsaved)
-            {
+        private void Notepad_FormClosing(object sender, FormClosingEventArgs e) {
+            if (isUnsaved) {
                 var res = MessageBox.Show(this, "Would you like to save canges?", "Notepad", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
 
                 if (res == DialogResult.Yes)
                     saveFile();
                 else if (res == DialogResult.No)
-                {
-                    //Do nothing
-                }
+                    ;      //Gör inget men behöver ett ; eftersom {} sparats in på
                 else if (res == DialogResult.Cancel)
                     e.Cancel = true;
             }
